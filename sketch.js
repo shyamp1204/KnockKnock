@@ -19,24 +19,24 @@ function setup() {
   }
 
 
-  // let button = select('#submit');
-  // let user_input = select('#user_input');
-  // let output = select('#output');
+  let button = select('#submit');
+  let user_input = select('#user_input');
+  let output = select('#output');
 
-  // button.mousePressed(chat);
+  button.mousePressed(chat);
 
   function gotSpeech() {
     if (speechRec.resultValue) {
       let input = speechRec.resultString;
-      //user_input.value(input);
+      user_input.value(input);
       let reply = bot.reply("local-user", input);
       speech.speak(reply);
-      //output.html(reply);
+      output.html(reply);
     }
   }
 
-  // function chat() {
-  //   let input = user_input.value();
-  // }
+  function chat() {
+    let input = user_input.value();
+  }
 
 }
